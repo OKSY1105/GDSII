@@ -1,0 +1,21 @@
+# MCU_UART Conformal LEC Run Guide (for npit or server with Conformal license)
+
+## 1. Pre-Layout LEC (run from <ROOT>/SoC_make_G45/TOP/EC)
+  $> lec
+  SETUP> dofile ./mcu_uart_script/mcu_uart_stage1_system.tcl   # Stage 1: cmsdk_mcu_system RTL vs Stage-1 netlist
+  SETUP> dofile ./mcu_uart_script/mcu_uart_stage2_mcu.tcl      # Stage 2: cmsdk_mcu Top RTL + Stage-1 netlist vs Stage-2 netlist
+
+## 2. Post-Layout LEC (after PnR, run from <ROOT>/SoC_make_G45/TOP/EC/POST)
+  $> lec
+  SETUP> dofile ./mcu_uart_script/mcu_uart_post.tcl            # Revised: ../../PNR/mcu_uart.v
+
+## 3. Files to copy to LEC server (keep relative paths under <ROOT>/)
+  - Required for Stage 1:
+    1) cortexm0_designstart/logical/uart_apb/verilog/ (6 files: uart_apb_wrapper.v + user UART 5 files)
+    2) cortexm0_designstart/logical/cmsdk_apb_subsystem/verilog/cmsdk_apb_subsystem.v (line 687 modified)
+    3) cortexm0_designstart/implementation/cortex_m0_mcu_system_cadence_8ns/mcu_uart_mapped/mcu_uart_system_syn_final.v
+  - Required for Stage 2:
+    4) SoC_make_G45/TOP/SYN/mcu_uart_mapped/mcu_uart_syn_final.v (pure synthesized netlist, before add_pad)
+    5) SoC_make_G45/TOP/EC/ (mcu_uart_script/, mcu_uart_log/, POST/)
+  - Library path:
+    All EC scripts use absolute paths under /GPDK045/digital/... (same as UART_GDSII/TOP/EC/uart_script.tcl).

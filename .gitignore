@@ -75,3 +75,18 @@ MCU_UART/SoC_make_G45/TOP/PNR/*.sdf*
 MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_run1/
 MCU_UART/SoC_make_G45/TOP/SIM/PRE/cmsdk_mcu_*
 MCU_UART/SoC_make_G45/TOP/SIM/PRE/mcu_uart_*
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_hier.v
+
+# Additional MCU_UART post-sim netlist & Innovus temp exclusions
+**/mcu_uart_hier.v
+**/mcu_uart_post_*.sdf
+scheduling_file.cts*
+rc_model.bin
+pm.ob
+*.old
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_InitDesign
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_PowerPlan
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_PlaceOpt
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_PostCTSopt
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_RouteDesign
+MCU_UART/SoC_make_G45/TOP/PNR/mcu_uart_ChipFinish

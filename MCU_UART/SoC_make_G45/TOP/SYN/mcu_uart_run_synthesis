@@ -1,0 +1,10 @@
+#!/bin/csh -f
+## Start Time
+echo -n "Syn Start : " > cds_syn_runtime
+date > cds_syn_runtime
+
+genus -f ./script/mcu_uart_45nm.tcl -log ./mcu_uart_log/all.log
+
+## End Time
+echo -n "Syn End   : " >> cds_syn_runtime
+date >> cds_syn_runtime
