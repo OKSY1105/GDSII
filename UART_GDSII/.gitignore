@@ -1,0 +1,7 @@
+GPDK045/
+cortexm0_designstart/
+Merge/
+SW_install/
+CSHRC/
+/SoC_make_G45/TOP/SIM/TESTBENCH/tb_cpu8_top.sv
+/SoC_make_G45/TOP/rv32i_cpu/

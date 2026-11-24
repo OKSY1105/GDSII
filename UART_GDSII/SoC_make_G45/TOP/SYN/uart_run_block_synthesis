@@ -1,0 +1,5 @@
+#!/bin/csh -f
+# Run from TOP/SYN. Outputs are isolated in uart_block_* directories.
+mkdir -p ./uart_block_log
+genus -batch -f ./uart_no_pad/uart_45nm_block_mmmc.tcl -log ./uart_block_log/uart_block_all.log
+exit $status

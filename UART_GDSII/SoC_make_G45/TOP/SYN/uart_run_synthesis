@@ -1,0 +1,14 @@
+#!/bin/csh -f
+
+## SS/FF MMMC synthesis. Run from TOP/SYN.
+mkdir -p ./uart_log
+echo -n "UART MMMC Syn Start : " > cds_uart_syn_runtime
+date >> cds_uart_syn_runtime
+
+genus -batch -f ./script/uart_45nm_mmmc.tcl -log ./uart_log/uart_mmmc_all.log
+set rc = $status
+
+## End Time
+echo -n "UART MMMC Syn End : " >> cds_uart_syn_runtime
+date >> cds_uart_syn_runtime
+exit $rc

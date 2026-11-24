@@ -1,0 +1,4 @@
+VDD	./uart_block_reports/power/static_VDD.ptiavg
+VSS	./uart_block_reports/power/static_VSS.ptiavg
+VDD	./uart_block_reports/power/static_VDD.ptiavg
+VSS	./uart_block_reports/power/static_VSS.ptiavg

@@ -1,0 +1,78 @@
+Multi-Mode Analysis View Report
+_______________________________
+
++ ALL Views
+   |
+   + Analysis View:  UART_FF_BEST
+     |
+     + Delay Calc Corner: UART_FF_CORNER
+     |   |
+     |   + timing_condition: UART_FF_TIMING
+     |   |    |
+     |   |    + library_sets: UART_FF_LIBS
+     |   |        |
+     |   |        + timing: /GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib
+                             /GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib
+                             /GPDK045/digital/giolib045_v3.5/timing/pads_FF_s1vg.lib
+     |   |    |
+     |   |    + opcond: UART_FF_OPCOND
+     |   |    |    + process: 1.0
+     |   |    |    + voltage: 1.1
+     |   |    |    + temperature: 0.0
+     |   |
+     |   |
+     |   |
+     |   + rc_corner: UART_RC
+     |   |    |
+     |   |    + postRoute_res: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_cap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_xcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkres: 1.0 1.0 1.0
+     |   |    |
+     |   |    + qx_tech_file: /GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx/gpdk045.tch
+     |
+     + Constraint Mode: UART_FUNC
+     |   |
+     |   + SDC Constraint Files: ./uart_no_pad/uart_top_block_mmmc.sdc
+   |
+   + Analysis View:  UART_SS_WORST
+     |
+     + Delay Calc Corner: UART_SS_CORNER
+     |   |
+     |   + timing_condition: UART_SS_TIMING
+     |   |    |
+     |   |    + library_sets: UART_SS_LIBS
+     |   |        |
+     |   |        + timing: /GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib
+                             /GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib
+                             /GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib
+     |   |    |
+     |   |    + opcond: UART_SS_OPCOND
+     |   |    |    + process: 1.0
+     |   |    |    + voltage: 0.9
+     |   |    |    + temperature: 125.0
+     |   |
+     |   |
+     |   |
+     |   + rc_corner: UART_RC
+     |   |    |
+     |   |    + postRoute_res: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_cap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_xcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkres: 1.0 1.0 1.0
+     |   |    |
+     |   |    + qx_tech_file: /GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx/gpdk045.tch
+     |
+     + Constraint Mode: UART_FUNC
+     |   |
+     |   + SDC Constraint Files: ./uart_no_pad/uart_top_block_mmmc.sdc
